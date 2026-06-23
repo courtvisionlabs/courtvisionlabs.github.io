@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CourtVisionLabs.ai</title>
-  <meta name="description" content="AI-powered badminton coaching. Live streaming, real-time scoring, and match analytics.">
+  <meta name="description" content="AI-powered sports analytics. Real-time scores, elite stats, relentless insights.">
   <link rel="icon" type="image/png" href="https://images.squarespace-cdn.com/content/v1/69fd01288c8d8d348d1d6fb6/a20cc7e9-091f-4bb4-838c-c6976e5a6705/57126B91-8AE3-4317-B2BD-38DD697F82B4.png?format=100w">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,16 +12,20 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Header -->
   <header class="site-header">
     <div class="header-inner">
       <a href="/" class="logo">
         <img src="https://images.squarespace-cdn.com/content/v1/69fd01288c8d8d348d1d6fb6/a20cc7e9-091f-4bb4-838c-c6976e5a6705/57126B91-8AE3-4317-B2BD-38DD697F82B4.png?format=1500w" alt="CourtVisionLabs.ai">
       </a>
       <nav class="site-nav" id="siteNav">
+        <a href="store.html">Store</a>
         <a href="/" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
         <a href="privacy.html">Privacy</a>
       </nav>
-      <a href="https://www.instagram.com/courtvisionlabs" target="_blank" rel="noopener" class="nav-right">Instagram</a>
+      <a href="cart.html" class="cart-link">Cart</a>
       <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
         <span></span><span></span>
       </button>
@@ -29,35 +33,59 @@
   </header>
 
   <main>
+    <!-- Hero -->
     <section class="hero" id="home">
       <video class="hero-video" autoplay muted loop playsinline preload="auto">
-        <source src="demo.mp4" type="video/mp4">
+        <source src="source/paris_olympic_demo_ig_red_note.mp4" type="video/mp4">
       </video>
       <div class="hero-overlay"></div>
       <div class="hero-content">
         <h1 class="hero-title"><span class="highlight">Own the Game</span></h1>
-        <p class="hero-subtitle">AI-powered badminton coaching with live streaming, real-time scoring, and match analytics.</p>
-        <a href="https://www.instagram.com/courtvisionlabs" target="_blank" rel="noopener" class="btn btn-primary">Follow Us</a>
+        <p class="hero-subtitle">Real-time scores, elite stats, relentless insights.</p>
+        <a href="https://www.instagram.com/courtvisionlabs" target="_blank" rel="noopener" class="btn btn-primary">Follow Now</a>
       </div>
     </section>
 
-    <section class="features-section">
-      <div class="container">
-        <h2 class="section-title">What CourtVision Does</h2>
-        <div class="features-grid">
-          <div class="feature-card">
-            <h3>Live Streaming</h3>
-            <p>YouTube live with adaptive bitrate. Stream your matches with a real-time scoreboard overlay — works on WiFi or cellular.</p>
-          </div>
-          <div class="feature-card">
-            <h3>Apple Watch Umpire</h3>
-            <p>Control scoring, serving, and undo from your wrist. Start matches, manage players, and share broadcast links — all from the Watch.</p>
-          </div>
-          <div class="feature-card">
-            <h3>Match Analytics</h3>
-            <p>Record every rally, track scores across games, and review match history. Full-court analysis for coaching insights.</p>
-          </div>
-        </div>
+    <!-- Why We Exist -->
+    <section class="about-section" id="why">
+      <div class="container about-grid">
+        <h2 class="section-title">Why We Exist</h2>
+        <p class="about-lead">Sports move fast. We move faster, delivering the numbers that separate champions from chasers.</p>
+        <p class="about-detail">Our platform fuses cutting-edge tech with relentless passion, giving you the clarity to dominate every play. <a href="about.html">Learn More</a></p>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonials">
+      <div class="slider" data-slider>
+        <button class="slider-arrow slider-arrow-left" aria-label="Previous" data-slider-prev>&#8592;</button>
+        <ul class="slider-list" data-slider-list>
+          <li class="slide active">
+            <blockquote>
+              <p>&ldquo;Their attention to detail and commitment to quality truly stood out. We&rsquo;ve already recommended them to others.&rdquo;</p>
+              <cite>&mdash; Former Customer</cite>
+            </blockquote>
+          </li>
+          <li class="slide">
+            <blockquote>
+              <p>&ldquo;Creative, reliable, and genuinely passionate about what they do.&rdquo;</p>
+              <cite>&mdash; Former Customer</cite>
+            </blockquote>
+          </li>
+          <li class="slide">
+            <blockquote>
+              <p>&ldquo;A professional team that delivers on their promises.&rdquo;</p>
+              <cite>&mdash; Former Customer</cite>
+            </blockquote>
+          </li>
+          <li class="slide">
+            <blockquote>
+              <p>&ldquo;Every detail was thoughtfully executed. We&rsquo;re thrilled with the outcome.&rdquo;</p>
+              <cite>&mdash; Former Customer</cite>
+            </blockquote>
+          </li>
+        </ul>
+        <button class="slider-arrow slider-arrow-right" aria-label="Next" data-slider-next>&#8594;</button>
       </div>
     </section>
   </main>
@@ -65,26 +93,10 @@
   <footer class="site-footer">
     <div class="container footer-grid">
       <div class="footer-col"><h4>courtvisionlabs.ai</h4></div>
-      <div class="footer-col footer-col-right">
-        <div class="footer-links">
-          <a href="privacy.html">Privacy Policy</a>
-          <a href="mailto:courtvisionlab@gmail.com">Contact</a>
-        </div>
-      </div>
+      <div class="footer-col footer-col-right"><h4><a href="mailto:Hello@courtvisionlabs.ai">Hello@courtvisionlabs.ai</a></h4></div>
     </div>
   </footer>
 
-  <script>
-    (function() {
-      const toggle = document.querySelector('.menu-toggle');
-      const nav = document.getElementById('siteNav');
-      if (toggle && nav) {
-        toggle.addEventListener('click', function() {
-          const open = nav.classList.toggle('open');
-          toggle.setAttribute('aria-expanded', String(open));
-        });
-      }
-    })();
-  </script>
+  <script src="scripts.js" defer></script>
 </body>
 </html>
