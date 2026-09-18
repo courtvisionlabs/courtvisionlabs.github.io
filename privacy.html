@@ -35,10 +35,10 @@
       <div class="container split-grid">
         <div class="split-text">
           <h1 class="section-title">Privacy Policy</h1>
-          <p><strong>Last updated: June 23, 2026</strong></p>
+          <p><strong>Last updated: September 17, 2026</strong></p>
 
           <h2 style="font-size:1.3rem; margin-top:32px;">Overview</h2>
-          <p>CourtVision is a badminton coaching app that provides match recording, live streaming, and scorekeeping. We respect your privacy and are committed to protecting your data.</p>
+          <p>CourtVision is a badminton coaching app that provides match recording, live streaming to YouTube, scorekeeping, and AI footwork analysis of practice drills. This policy explains what stays on your device, what we upload, and who else receives it.</p>
 
           <h2 style="font-size:1.3rem; margin-top:32px;">Data We Access</h2>
           <p>When you connect your YouTube account, CourtVision accesses:</p>
@@ -49,22 +49,38 @@
 
           <h2 style="font-size:1.3rem; margin-top:32px;">How We Use Your Data</h2>
           <ul style="padding-left:20px; margin-bottom:16px;">
-            <li>YouTube access is used solely to create, manage, and end live broadcasts on your behalf during matches</li>
-            <li>Match data (scores, events) is stored locally on your device</li>
-            <li>Player names are stored locally on your device</li>
+            <li>YouTube access is used solely to create, manage, and end live broadcasts on your behalf during matches. We never read, edit, or delete any other videos, comments, or playlists on your channel.</li>
+            <li>Skeleton (body pose) data extracted from your practice videos is used to generate footwork coaching feedback, and to improve the accuracy of our analysis.</li>
+            <li>Match data (scores, events) and player names are used to display your match history.</li>
           </ul>
 
-          <h2 style="font-size:1.3rem; margin-top:32px;">Data Storage</h2>
-          <p>All app data is stored locally on your iPhone and Apple Watch. We do not operate servers that store your personal data. YouTube authentication tokens are stored securely in your device's keychain.</p>
+          <h2 style="font-size:1.3rem; margin-top:32px;">Data Stored On Your Device</h2>
+          <p>Your recorded videos never leave your device. Video files, match history, and player names are stored on your iPhone and Apple Watch. YouTube authentication tokens are stored in your device's keychain and are never transmitted to us.</p>
+
+          <h2 style="font-size:1.3rem; margin-top:32px;">Data We Upload To Our Servers</h2>
+          <p>When you run footwork analysis on a practice video, the following is uploaded to our database (Google Firebase Firestore), stored under an identifier derived from your Apple sign-in — your email address, or the anonymised relay address if you chose to hide it:</p>
+          <ul style="padding-left:20px; margin-bottom:16px;">
+            <li>Skeleton (body pose) keypoint data extracted from the video, frame by frame</li>
+            <li>Session metadata: frame count, frame rate, video dimensions, pose model name, court reference points and calibration values</li>
+            <li>The coaching feedback generated for that session</li>
+            <li>Match records (scores and events) when you record a match</li>
+          </ul>
+          <p><strong>We do not upload your video files, audio, or any images.</strong> Only the numeric pose data derived from them.</p>
 
           <h2 style="font-size:1.3rem; margin-top:32px;">Data Sharing</h2>
-          <p>We do not sell, share, or transfer your personal data to any third parties. The only external communication is between your device and YouTube's API servers when you use the live streaming feature.</p>
+          <p>We do not sell your data or share it with advertisers. Data leaves your device only in these cases:</p>
+          <ul style="padding-left:20px; margin-bottom:16px;">
+            <li><strong>YouTube</strong> — your video and audio stream, and broadcast details, when you live-stream a match</li>
+            <li><strong>Google Gemini API</strong> — the skeleton pose data described above, sent as text to generate coaching feedback. No video or images are sent.</li>
+            <li><strong>Google Firebase</strong> — hosts our database and handles sign-in</li>
+          </ul>
 
-          <h2 style="font-size:1.3rem; margin-top:32px;">Data Deletion</h2>
-          <p>You can revoke CourtVision's access to your YouTube account at any time through your Google Account settings. Deleting the app removes all locally stored data.</p>
+          <h2 style="font-size:1.3rem; margin-top:32px;">Data Retention and Deletion</h2>
+          <p>You can revoke CourtVision's access to your YouTube account at any time in your Google Account settings. Deleting the app removes all data stored on your device.</p>
+          <p>Deleting a video or match inside the app removes it from your device and marks the corresponding record in our database as deleted; the skeleton data is retained so we can continue improving our analysis. To have your uploaded data permanently erased, email us at <a href="mailto:courtvisionlab@gmail.com" style="color:var(--purple); font-weight:600; text-decoration:underline; text-underline-offset:4px;">courtvisionlab@gmail.com</a> and we will delete it.</p>
 
           <h2 style="font-size:1.3rem; margin-top:32px;">Third-Party Services</h2>
-          <p>CourtVision uses the YouTube Data API v3. Your use of YouTube features is also subject to <a href="https://policies.google.com/privacy" style="color:var(--purple); font-weight:600; text-decoration:underline; text-underline-offset:4px;">Google's Privacy Policy</a>.</p>
+          <p>CourtVision uses the YouTube Data API v3, the Google Gemini API, and Google Firebase. Your use of these features is also subject to <a href="https://policies.google.com/privacy" style="color:var(--purple); font-weight:600; text-decoration:underline; text-underline-offset:4px;">Google's Privacy Policy</a> and, for streaming, <a href="https://www.youtube.com/t/terms" style="color:var(--purple); font-weight:600; text-decoration:underline; text-underline-offset:4px;">YouTube's Terms of Service</a>.</p>
 
           <h2 style="font-size:1.3rem; margin-top:32px;">Contact</h2>
           <p>If you have questions about this privacy policy, contact us at: <a href="mailto:courtvisionlab@gmail.com" style="color:var(--purple); font-weight:600; text-decoration:underline; text-underline-offset:4px;">courtvisionlab@gmail.com</a></p>
