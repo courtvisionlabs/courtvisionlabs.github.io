@@ -35,7 +35,7 @@
       <div class="container split-grid">
         <div class="split-text">
           <h1 class="section-title">Privacy Policy</h1>
-          <p><strong>Last updated: September 17, 2026</strong></p>
+          <p><strong>Last updated: September 24, 2026</strong></p>
 
           <h2 style="font-size:1.3rem; margin-top:32px;">Overview</h2>
           <p>CourtVision is a badminton coaching app that provides match recording, live streaming to YouTube, scorekeeping, and AI footwork analysis of practice drills. This policy explains what stays on your device, what we upload, and who else receives it.</p>
@@ -74,6 +74,19 @@
             <li><strong>Google Gemini API</strong> — the skeleton pose data described above, sent as text to generate coaching feedback. No video or images are sent.</li>
             <li><strong>Google Firebase</strong> — hosts our database and handles sign-in</li>
           </ul>
+
+          <h2 style="font-size:1.3rem; margin-top:32px;">How We Protect Your Data</h2>
+          <p>We apply the following safeguards to all data CourtVision handles, including the Google user data obtained through the YouTube Data API:</p>
+          <ul style="padding-left:20px; margin-bottom:16px;">
+            <li><strong>Encryption in transit.</strong> Every network request the app makes — to Google's OAuth endpoints, the YouTube Data API, the Gemini API, and our database — uses HTTPS with TLS. The app makes no unencrypted network requests.</li>
+            <li><strong>Encryption at rest.</strong> Data we store in Google Cloud Firestore is encrypted at rest by Google Cloud Platform. Data held on your device is protected by iOS file-system encryption, tied to your device passcode.</li>
+            <li><strong>Credential storage.</strong> Your YouTube OAuth tokens are stored only in the iOS Keychain on your own device, where they are encrypted by the device's hardware-backed secure storage, isolated to CourtVision by the iOS app sandbox, and readable only while the device is unlocked. These tokens are never transmitted to us and never leave your device except to Google's own servers.</li>
+            <li><strong>Access control.</strong> Uploaded analysis data is stored under a path unique to your account and requires authentication to reach. Server-side security rules restrict each account to its own data, so one user cannot read another user's data. On our side, access is limited to the single developer who maintains the app, using multi-factor-protected Google accounts.</li>
+            <li><strong>Least privilege.</strong> CourtVision requests exactly one Google permission — the YouTube scope needed to create and manage live broadcasts on your own channel. We request no other Google user data, and we use no broader scope than the feature requires.</li>
+            <li><strong>No secrets in the app.</strong> The app contains no shared credentials granting access to other users' data. All Google access is authorised by you, for your own account.</li>
+            <li><strong>Data minimisation.</strong> We upload only the numeric pose data derived from your videos, never the videos, audio, or images themselves.</li>
+          </ul>
+          <p>If you believe you have found a security issue, please report it to <a href="mailto:courtvisionlab@gmail.com" style="color:var(--purple); font-weight:600; text-decoration:underline; text-underline-offset:4px;">courtvisionlab@gmail.com</a> and we will respond promptly.</p>
 
           <h2 style="font-size:1.3rem; margin-top:32px;">Data Retention and Deletion</h2>
           <p>You can revoke CourtVision's access to your YouTube account at any time in your Google Account settings. Deleting the app removes all data stored on your device.</p>
