@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CourtVisionLabs.ai</title>
-  <meta name="description" content="AI-powered sports analytics. Real-time scores, elite stats, relentless insights.">
+  <title>CourtVision — Smarter badminton development, powered by video and AI</title>
+  <meta name="description" content="CourtVision helps badminton players turn practice and match video into useful insights, focused actions, and visible progress. We also deliver professional tournament livestreaming.">
   <link rel="icon" type="image/png" href="https://images.squarespace-cdn.com/content/v1/69fd01288c8d8d348d1d6fb6/a20cc7e9-091f-4bb4-838c-c6976e5a6705/57126B91-8AE3-4317-B2BD-38DD697F82B4.png?format=100w">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,20 +12,17 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Header -->
   <header class="site-header">
     <div class="header-inner">
-      <a href="/" class="logo">
+      <a href="#home" class="logo">
         <img src="https://images.squarespace-cdn.com/content/v1/69fd01288c8d8d348d1d6fb6/a20cc7e9-091f-4bb4-838c-c6976e5a6705/57126B91-8AE3-4317-B2BD-38DD697F82B4.png?format=1500w" alt="CourtVisionLabs.ai">
       </a>
       <nav class="site-nav" id="siteNav">
-        <a href="store.html">Store</a>
-        <a href="/" class="active">Home</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-        <a href="privacy.html">Privacy</a>
+        <a href="#ai-coaching">AI Coaching</a>
+        <a href="#livestream">Livestream</a>
+        <a href="#about">About</a>
+        <a href="#early-access">Contact</a>
       </nav>
-      <a href="cart.html" class="cart-link">Cart</a>
       <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
         <span></span><span></span>
       </button>
@@ -33,67 +30,208 @@
   </header>
 
   <main>
-    <!-- Hero -->
+    <!-- 01 Hero -->
     <section class="hero" id="home">
       <video class="hero-video" autoplay muted loop playsinline preload="auto">
         <source src="source/paris_olympic_demo_ig_red_note.mp4" type="video/mp4">
       </video>
       <div class="hero-overlay"></div>
       <div class="hero-content">
-        <h1 class="hero-title"><span class="highlight">Own the Game</span></h1>
-        <p class="hero-subtitle">Real-time scores, elite stats, relentless insights.</p>
-        <a href="https://www.instagram.com/courtvisionlabs" target="_blank" rel="noopener" class="btn btn-primary">Follow Now</a>
+        <h1 class="hero-title">Smarter badminton development<br><span class="highlight">powered by video and AI</span></h1>
+        <p class="hero-subtitle">CourtVision helps players turn practice and match video into useful insights, focused actions, and visible progress. We also help tournaments reach more fans through professional badminton livestreaming.</p>
+        <div class="hero-actions">
+          <a href="#early-access" class="btn btn-primary">Join the Early-Access List</a>
+          <a href="#livestream" class="btn btn-ghost">Explore Livestream Services</a>
+        </div>
       </div>
     </section>
 
-    <!-- Why We Exist -->
-    <section class="about-section" id="why">
-      <div class="container about-grid">
-        <h2 class="section-title">Why We Exist</h2>
-        <p class="about-lead">Sports move fast. We move faster, delivering the numbers that separate champions from chasers.</p>
-        <p class="about-detail">Our platform fuses cutting-edge tech with relentless passion, giving you the clarity to dominate every play. <a href="about.html">Learn More</a></p>
+    <!-- 02 Offerings at a glance -->
+    <section class="page-section section-light" id="offerings">
+      <div class="container">
+        <p class="eyebrow">Two ways we help</p>
+        <h2 class="section-title">Which one is you?</h2>
+        <div class="offer-grid">
+
+          <div class="offer-card" id="ai-coaching">
+            <h3>AI Player Development</h3>
+            <p>Bring video, performance insights, coaching feedback, recommended actions, and progress tracking together in one continuous development experience.</p>
+            <ul class="offer-list">
+              <li>Understand what happened</li>
+              <li>Identify what to work on next</li>
+              <li>Keep video, feedback, and priorities together</li>
+              <li>Track whether actions lead to improvement</li>
+              <li>Extend coach guidance between lessons</li>
+            </ul>
+            <a href="#early-access" class="btn btn-dark">Join the Early-Access List</a>
+          </div>
+
+          <div class="offer-card" id="livestream">
+            <h3>Tournament Livestreaming</h3>
+            <p>Professional badminton livestreaming that connects events with families, fans, sponsors, and players beyond the venue.</p>
+            <ul class="offer-list">
+              <li>YouTube and RTMP streaming</li>
+              <li>Badminton-specific scoring</li>
+              <li>Player and match information</li>
+              <li>Sponsor branding</li>
+              <li>Remote scoring, recording, and reconnection</li>
+            </ul>
+            <a href="#early-access" class="btn btn-dark">Discuss Your Tournament</a>
+          </div>
+
+        </div>
       </div>
     </section>
 
-    <!-- Testimonials -->
-    <section class="testimonials" id="testimonials">
-      <div class="slider" data-slider>
-        <button class="slider-arrow slider-arrow-left" aria-label="Previous" data-slider-prev>&#8592;</button>
-        <ul class="slider-list" data-slider-list>
-          <li class="slide active">
-            <blockquote>
-              <p>&ldquo;Their attention to detail and commitment to quality truly stood out. We&rsquo;ve already recommended them to others.&rdquo;</p>
-              <cite>&mdash; Former Customer</cite>
-            </blockquote>
-          </li>
-          <li class="slide">
-            <blockquote>
-              <p>&ldquo;Creative, reliable, and genuinely passionate about what they do.&rdquo;</p>
-              <cite>&mdash; Former Customer</cite>
-            </blockquote>
-          </li>
-          <li class="slide">
-            <blockquote>
-              <p>&ldquo;A professional team that delivers on their promises.&rdquo;</p>
-              <cite>&mdash; Former Customer</cite>
-            </blockquote>
-          </li>
-          <li class="slide">
-            <blockquote>
-              <p>&ldquo;Every detail was thoughtfully executed. We&rsquo;re thrilled with the outcome.&rdquo;</p>
-              <cite>&mdash; Former Customer</cite>
-            </blockquote>
-          </li>
-        </ul>
-        <button class="slider-arrow slider-arrow-right" aria-label="Next" data-slider-next>&#8594;</button>
+    <!-- 03 Development loop -->
+    <section class="page-section section-white" id="loop">
+      <div class="container">
+        <p class="eyebrow">How the AI platform works</p>
+        <h2 class="section-title">The development loop</h2>
+        <div class="loop-grid">
+          <div class="loop-step">
+            <span class="loop-num">1</span>
+            <h4>Record</h4>
+            <p>Capture practice or match video using an ordinary camera or mobile device.</p>
+          </div>
+          <div class="loop-step">
+            <span class="loop-num">2</span>
+            <h4>Understand</h4>
+            <p>Review important moments and meaningful performance indicators.</p>
+          </div>
+          <div class="loop-step">
+            <span class="loop-num">3</span>
+            <h4>Take Action</h4>
+            <p>Turn insights and coach feedback into focused training priorities.</p>
+          </div>
+          <div class="loop-step">
+            <span class="loop-num">4</span>
+            <h4>Track Improvement</h4>
+            <p>See whether completed actions lead to measurable progress over time.</p>
+          </div>
+        </div>
+        <p class="bridge-line">Video &rarr; Insight &rarr; Action &rarr; Improvement &mdash; all in one place.</p>
+      </div>
+    </section>
+
+    <!-- 06 Results and credibility -->
+    <section class="page-section section-bright" id="results">
+      <div class="container">
+        <p class="eyebrow">Proof</p>
+        <h2 class="section-title">Built and tested in the badminton community</h2>
+        <p class="about-lead">At the Northwest Open Regional Championship, CourtVision livestreamed 29 matches across three days. Within five days, the event generated:</p>
+        <div class="stat-row">
+          <div class="stat"><span class="stat-num">29</span><span class="stat-label">matches streamed</span></div>
+          <div class="stat"><span class="stat-num">4,614</span><span class="stat-label">live &amp; recorded views</span></div>
+          <div class="stat"><span class="stat-num">92.4</span><span class="stat-label">watch hours</span></div>
+          <div class="stat"><span class="stat-num">5</span><span class="stat-label">countries reached</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07 About -->
+    <section class="page-section section-light" id="about">
+      <div class="container split-grid">
+        <div class="split-text">
+          <p class="eyebrow">About</p>
+          <h2 class="section-title">Built from inside the badminton community</h2>
+        </div>
+        <div class="split-text">
+          <p>CourtVision was created after seeing how player videos, coaching feedback, training goals, and progress records often remain disconnected.</p>
+          <p>We are building badminton-specific technology that helps athletes understand their development, and helps coaches extend their guidance between lessons.</p>
+          <p>Our team combines applied-science leadership, computer vision, product development, tournament production, and direct experience supporting junior badminton players and families.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 08 Conversion form -->
+    <section class="page-section section-white" id="early-access">
+      <div class="container split-grid">
+        <div class="split-text">
+          <p class="eyebrow">Get started</p>
+          <h2 class="section-title">Join the early-access list</h2>
+          <p>Tell us who you are and which offering fits. We will follow up with early access to the player-development app, or to discuss livestreaming your tournament.</p>
+        </div>
+        <div>
+          <!-- Submissions go to Web3Forms. Replace the access key below with the
+               real key from web3forms.com or the form will silently fail. -->
+          <form class="contact-form" action="https://api.web3forms.com/submit" method="POST" data-form>
+            <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+            <input type="hidden" name="subject" value="CourtVision early-access enquiry">
+            <input type="checkbox" name="botcheck" class="honeypot" tabindex="-1" autocomplete="off">
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="name">Name <span class="req">*</span></label>
+                <input id="name" type="text" name="name" required autocomplete="name">
+              </div>
+              <div class="form-field">
+                <label for="email">Email <span class="req">*</span></label>
+                <input id="email" type="email" name="email" required autocomplete="email">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="role">I am a <span class="req">*</span></label>
+                <select id="role" name="role" required>
+                  <option value="">Select one</option>
+                  <option>Player</option>
+                  <option>Parent</option>
+                  <option>Coach</option>
+                  <option>Club or Academy</option>
+                  <option>Tournament Organizer</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="interest">Interested in <span class="req">*</span></label>
+                <select id="interest" name="interest" required>
+                  <option value="">Select one</option>
+                  <option>AI Player Development</option>
+                  <option>Livestreaming</option>
+                  <option>Both</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="organization">Playing level or organization</label>
+              <input id="organization" type="text" name="organization">
+            </div>
+
+            <div class="form-field">
+              <label for="challenge">Biggest development challenge</label>
+              <input id="challenge" type="text" name="challenge">
+            </div>
+
+            <div class="form-field">
+              <label for="message">Anything else?</label>
+              <textarea id="message" name="message" rows="4"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-dark">Request Early Access</button>
+            <p class="form-status" data-form-status role="status" aria-live="polite"></p>
+          </form>
+        </div>
       </div>
     </section>
   </main>
 
+  <!-- 09 Footer -->
   <footer class="site-footer">
     <div class="container footer-grid">
       <div class="footer-col"><h4>courtvisionlabs.ai</h4></div>
-      <div class="footer-col footer-col-right"><h4><a href="mailto:Hello@courtvisionlabs.ai">Hello@courtvisionlabs.ai</a></h4></div>
+      <div class="footer-col footer-col-right">
+        <h4>
+          <a href="mailto:Hello@courtvisionlabs.ai">Hello@courtvisionlabs.ai</a>
+          &nbsp;·&nbsp;
+          <a href="https://www.instagram.com/courtvisionlabs" target="_blank" rel="noopener">Instagram</a>
+          &nbsp;·&nbsp;
+          <a href="privacy.html">Privacy</a>
+          &nbsp;·&nbsp;
+          <a href="terms.html">Terms</a>
+        </h4>
+      </div>
     </div>
   </footer>
 

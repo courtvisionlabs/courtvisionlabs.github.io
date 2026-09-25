@@ -17,30 +17,7 @@
     });
   }
 
-  // Testimonial slider
-  const slider = document.querySelector('[data-slider]');
-  if (slider) {
-    const slides = Array.from(slider.querySelectorAll('.slide'));
-    const prev = slider.querySelector('[data-slider-prev]');
-    const next = slider.querySelector('[data-slider-next]');
-    let cur = 0, timer = null;
-
-    function show(i) {
-      slides.forEach((s, idx) => s.classList.toggle('active', idx === i));
-      cur = i;
-    }
-    function advance() { show((cur + 1) % slides.length); }
-    function start() { stop(); timer = setInterval(advance, 5000); }
-    function stop() { if (timer) { clearInterval(timer); timer = null; } }
-
-    if (prev) prev.addEventListener('click', () => { show((cur - 1 + slides.length) % slides.length); start(); });
-    if (next) next.addEventListener('click', () => { advance(); start(); });
-    slider.addEventListener('mouseenter', stop);
-    slider.addEventListener('mouseleave', start);
-    start();
-  }
-
-  // Contact form
+  // Lead form
   document.querySelectorAll('[data-form]').forEach(function (form) {
     const status = form.querySelector('[data-form-status]');
     const btn = form.querySelector('button[type="submit"]');
