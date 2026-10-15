@@ -153,11 +153,13 @@
           <p>Tell us who you are and which offering fits. We will follow up with early access to the player-development app, or to discuss livestreaming your tournament.</p>
         </div>
         <div>
-          <!-- Submissions go to Web3Forms. Replace the access key below with the
-               real key from web3forms.com or the form will silently fail. -->
+          <!-- Submissions go to Web3Forms, which emails them to courtvisionlab@gmail.com
+               (form "CourtVision Early Access"). The access key is public by design:
+               it can only deliver submissions to that inbox. -->
           <form class="contact-form" action="https://api.web3forms.com/submit" method="POST" data-form>
-            <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+            <input type="hidden" name="access_key" value="85173c58-815b-4814-9cd1-d1eacbc16d7b">
             <input type="hidden" name="subject" value="CourtVision early-access enquiry">
+            <input type="hidden" name="from_name" value="CourtVision website">
             <input type="checkbox" name="botcheck" class="honeypot" tabindex="-1" autocomplete="off">
 
             <div class="form-row">

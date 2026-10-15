@@ -22,6 +22,7 @@
     const status = form.querySelector('[data-form-status]');
     const btn = form.querySelector('button[type="submit"]');
     const key = form.querySelector('input[name="access_key"]');
+    const label = btn ? btn.textContent : '';
 
     form.addEventListener('submit', async function (e) {
       e.preventDefault();
@@ -50,7 +51,7 @@
       } catch {
         if (status) { status.textContent = 'Network error. Try again later.'; status.classList.add('error'); }
       } finally {
-        btn.disabled = false; btn.textContent = btn.closest('.contact-form')?.querySelector('[name="subject"]')?.value.includes('Contact') ? 'Send' : 'Submit';
+        btn.disabled = false; btn.textContent = label;
       }
     });
   });
