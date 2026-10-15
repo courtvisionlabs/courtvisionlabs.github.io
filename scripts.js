@@ -28,7 +28,7 @@
       if (status) { status.textContent = ''; status.className = 'form-status'; }
 
       if (!key || !key.value || key.value === 'YOUR_WEB3FORMS_ACCESS_KEY') {
-        if (status) { status.textContent = 'Form not configured yet. Email Hello@courtvisionlabs.ai directly.'; status.classList.add('error'); }
+        if (status) { status.textContent = 'Form not configured yet. Email courtvisionlab@gmail.com directly.'; status.classList.add('error'); }
         return;
       }
 

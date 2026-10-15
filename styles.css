@@ -138,11 +138,19 @@ img, video { max-width: 100%; display: block; }
 
 .hero-title {
   font-family: var(--heading-font);
-  font-size: clamp(2.2rem, 4.6vw, 3.75rem);
+  font-size: clamp(2rem, 7vw, 3rem);
   font-weight: 800;
   margin: 0 0 20px;
   line-height: 1.08;
   letter-spacing: -0.03em;
+}
+
+/* Above phone width, each phrase stays on its own line: the size tracks the
+   viewport so "Smarter badminton development" (about 16.5× the font size wide)
+   always fits. Phones let the phrases wrap at a readable size. */
+@media (min-width: 600px) {
+  .hero-title { font-size: min(3rem, 5.2vw); }
+  .hero-line { white-space: nowrap; }
 }
 
 .hero-title .highlight {
