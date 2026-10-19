@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="referrer" content="no-referrer">
+  <meta name="theme-color" content="#0E0A1F">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <title>Remote Scorer — CourtVision</title>
+  <link rel="icon" type="image/png" href="https://images.squarespace-cdn.com/content/v1/69fd01288c8d8d348d1d6fb6/a20cc7e9-091f-4bb4-838c-c6976e5a6705/57126B91-8AE3-4317-B2BD-38DD697F82B4.png?format=100w">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="score.css">
+</head>
+<body>
+  <header class="bar">
+    <span class="brand"><span class="brand-name">CourtVision</span> Remote Scorer</span>
+    <span class="pill" id="connection" role="status" aria-live="polite"><span class="dot"></span><span class="pill-text">Connecting…</span></span>
+  </header>
+
+  <main id="scorer" hidden>
+    <p class="meta" id="meta"></p>
+    <div class="banner" id="banner" role="status" aria-live="polite" hidden></div>
+
+    <section class="players">
+      <button class="player p1" id="pointP1" data-action="pointP1">
+        <span class="player-name"><span class="swatch"></span><span class="name" id="p1Name">Player 1</span><span class="serve" id="p1Serve" hidden aria-label="Serving">● serving</span></span>
+        <span class="score" id="p1Score">0</span>
+        <span class="hint" id="p1Hint">Tap for +1</span>
+      </button>
+      <button class="player p2" id="pointP2" data-action="pointP2">
+        <span class="player-name"><span class="swatch"></span><span class="name" id="p2Name">Player 2</span><span class="serve" id="p2Serve" hidden aria-label="Serving">● serving</span></span>
+        <span class="score" id="p2Score">0</span>
+        <span class="hint" id="p2Hint">Tap for +1</span>
+      </button>
+    </section>
+
+    <section class="controls">
+      <button class="control wide" id="undo" data-action="undoPoint"><span aria-hidden="true">↶</span> <span id="undoText">Undo</span></button>
+      <button class="control" id="highlight" data-action="highlight"><span aria-hidden="true">★</span> Highlight</button>
+      <button class="control" id="toggleServer" data-action="toggleServer"><span aria-hidden="true">⇄</span> Switch server</button>
+      <button class="control" id="breakButton" data-action="pause">Break</button>
+      <button class="control" id="endGame" data-action="endGame">End Game</button>
+      <button class="control danger" id="endMatch" data-action="endMatch">End Match</button>
+    </section>
+    <p class="footnote">Starting the match and going live happen on the camera phone.</p>
+  </main>
+
+  <section class="screen" id="screen">
+    <h1 id="screenTitle">Connecting to the match…</h1>
+    <p id="screenText"></p>
+    <button class="primary" id="screenButton" hidden>Try Again</button>
+  </section>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <dialog id="confirm">
+    <form method="dialog">
+      <h2 id="confirmTitle"></h2>
+      <p id="confirmText"></p>
+      <div class="dialog-buttons">
+        <button value="cancel" class="secondary">Cancel</button>
+        <button value="ok" class="primary" id="confirmOK"></button>
+      </div>
+    </form>
+  </dialog>
+
+  <script type="module" src="score.js"></script>
+</body>
+</html>

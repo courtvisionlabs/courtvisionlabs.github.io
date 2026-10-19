@@ -33,7 +33,7 @@
       <div class="container split-grid">
         <div class="split-text">
           <h1 class="section-title">Privacy Policy</h1>
-          <p><strong>Last updated: October 14, 2026</strong></p>
+          <p><strong>Last updated: October 17, 2026</strong></p>
 
           <h2 style="font-size:1.3rem; margin-top:32px;">Overview</h2>
           <p>CourtVision is a badminton coaching app that provides match recording, live streaming to YouTube, scorekeeping, and AI footwork analysis of practice drills. This policy explains what stays on your device, what we upload, and who else receives it.</p>
@@ -66,6 +66,7 @@
             <li>Match records (scores and events) when you record a match</li>
           </ul>
           <p><strong>We do not upload your video files, audio, or any images.</strong> Only the numeric pose data derived from them.</p>
+          <p><strong>Remote scoring.</strong> If you turn on Remote Scorer during a match, so someone can keep score from their own phone's browser, the following is held in Google Firebase Realtime Database for that match only, linked to your account: the player names, the score, finished games, who is serving, whether play is on a break or has ended, and whether the livestream is live; each scoring action the scorer sends (for example "point for player 1") and when it was sent; and a random ID for each scorer's browser so you can see that a scorer is connected. The scorer page needs no account and stores only that random ID in the browser. This data is deleted when the match ends or when you turn remote scoring off (or, if the app closed unexpectedly, the next time you open its Live tab), and the link stops working within 11 hours in any case.</p>
 
           <h2 style="font-size:1.3rem; margin-top:32px;">Data Sharing</h2>
           <p>We do not sell your data or share it with advertisers. Data leaves your device only in these cases:</p>
@@ -80,9 +81,9 @@
           <p>We apply the following safeguards to all data CourtVision handles, including the Google user data obtained through the YouTube Data API:</p>
           <ul style="padding-left:20px; margin-bottom:16px;">
             <li><strong>Encryption in transit.</strong> Every request that carries your account data or personal information — Google sign-in and OAuth, the YouTube Data API, AI analysis, and our database — uses HTTPS with TLS. The live video is sent to YouTube over RTMPS (RTMP over TLS) whenever YouTube offers it, which encrypts both the stream and its stream key.</li>
-            <li><strong>Encryption at rest.</strong> Data we store in Google Cloud Firestore is encrypted at rest by Google Cloud Platform. Data held on your device is protected by iOS file-system encryption, tied to your device passcode.</li>
+            <li><strong>Encryption at rest.</strong> Data we store in Google Cloud Firestore and Firebase Realtime Database is encrypted at rest by Google Cloud Platform. Data held on your device is protected by iOS file-system encryption, tied to your device passcode.</li>
             <li><strong>Credential storage.</strong> Your YouTube OAuth tokens are stored only in the iOS Keychain on your own device, where they are encrypted by the device's hardware-backed secure storage, isolated to CourtVision by the iOS app sandbox, readable only while the device is unlocked, and excluded from device backups. These tokens are never transmitted to us and never leave your device except to Google's own servers. Sign-in uses PKCE and a per-request state check, so an intercepted sign-in response cannot be reused by another app.</li>
-            <li><strong>Access control.</strong> Uploaded analysis data is stored under a path unique to your account and requires authentication to reach. Server-side security rules restrict each account to its own data, so one user cannot read another user's data. On our side, access is limited to the single developer who maintains the app, using multi-factor-protected Google accounts.</li>
+            <li><strong>Access control.</strong> Uploaded analysis data is stored under a path unique to your account and requires authentication to reach. Server-side security rules restrict each account to its own data, so one user cannot read another user's data. A remote scoring link contains a long random code and is shown only on your phone, never on the livestream; anyone you give it to can see and change that match's score until it ends, but cannot read anything else. On our side, access is limited to the single developer who maintains the app, using multi-factor-protected Google accounts.</li>
             <li><strong>Least privilege.</strong> CourtVision requests exactly one Google permission — the YouTube scope needed to create and manage live broadcasts on your own channel. We request no other Google user data, and we use no broader scope than the feature requires.</li>
             <li><strong>No secrets in the app.</strong> The app contains no API keys or shared credentials that would grant access to our services or to other users' data. AI analysis requests are accepted only from genuine copies of the app running on real Apple devices, verified with Firebase App Check and Apple App Attest. All Google account access is authorised by you, for your own account.</li>
             <li><strong>Data minimisation.</strong> We upload only the numeric pose data derived from your videos, never the videos, audio, or images themselves.</li>
@@ -103,6 +104,7 @@
           <h2 style="font-size:1.3rem; margin-top:32px;">Data Retention and Deletion</h2>
           <p><strong>Google user data.</strong> We do not retain any YouTube data on our servers at all. Your YouTube authentication token is held only in your device's keychain and is destroyed when you disconnect your account in the app or delete the app. You can also revoke CourtVision's access at any time in your Google Account settings, which invalidates the token immediately.</p>
           <p><strong>Data on your device.</strong> Videos, match history, and player names remain on your device until you delete them in the app, or until you delete the app, which removes all of them.</p>
+          <p><strong>Remote scoring sessions</strong> are deleted when the match ends or when you turn remote scoring off.</p>
           <p><strong>Data on our servers.</strong> We retain uploaded body-pose data, coaching results and your ratings and comments on them only for as long as is needed for the purposes described in this policy. Deleting a video or match inside the app removes it from your device and marks the corresponding record in our database as deleted. When the data is no longer needed for those purposes, we delete it.</p>
           <p>You may request permanent erasure of everything we hold about you at any time by emailing <a href="mailto:courtvisionlab@gmail.com" style="color:var(--purple); font-weight:600; text-decoration:underline; text-underline-offset:4px;">courtvisionlab@gmail.com</a>. We will delete it and confirm when it is done.</p>
 
