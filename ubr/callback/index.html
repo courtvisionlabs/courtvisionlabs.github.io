@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-qCTBL6m5O0RuZ/AAsKwycOnjJ7wivF8HjYOEDKEsRHw='; style-src 'unsafe-inline'">
+<title>Connecting UBR – CourtVision</title>
+<style>body{font:17px -apple-system,Helvetica,sans-serif;background:#0b0f17;color:#e8ecf2;display:flex;min-height:100vh;align-items:center;justify-content:center;margin:0;text-align:center;padding:24px}</style>
+</head>
+<body>
+<p id="msg">Returning to CourtVision…</p>
+<script>(function () {
+  var q = new URLSearchParams(location.search);
+  var code = q.get("code") || "", state = q.get("state") || "";
+  var ok = /^[A-Za-z0-9._~+\/=-]{1,2048}$/.test(code) && /^[A-Za-z0-9_-]{1,512}$/.test(state);
+  history.replaceState(null, "", location.pathname);
+  if (!ok) { document.getElementById("msg").textContent = "This link isn't complete. Go back to the CourtVision app and try connecting UBR again."; return; }
+  location.replace("courtvision-ubr://callback?code=" + encodeURIComponent(code) + "&state=" + encodeURIComponent(state));
+})();
+</script>
+</body>
+</html>
